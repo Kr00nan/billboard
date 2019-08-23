@@ -1,2 +1,10 @@
-<h1>Billboards#new</h1>
-<p>Find me in app/views/billboards/new.html.erb</p>
+<p>Welcome to the NEW page!<p>
+
+<%= form_for @billboard do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.submit %>
+<% end %>
+
+<%= link_to 'Return to the main page without submitting', billboards_path %>
