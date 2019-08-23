@@ -21,6 +21,8 @@ end
   Song.create(
     title: Faker::Book.title,
     artist_id: rand(100) + 1,
-    billboard_id: rand(5) +1
+    # this will create 0 - 5 for billboard_id. '0' will allow from some
+    # songs not to be included on a bill board...
+    billboard_id: rand(6)
   )
 end
