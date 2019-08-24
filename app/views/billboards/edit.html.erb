@@ -1,2 +1,10 @@
 <p>Hey! You've reached the EDIT page!<p>
+
+<%= form_for @billboard do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.submit %>
+<% end %>
+
 <%= link_to 'Back', billboards_path %>
