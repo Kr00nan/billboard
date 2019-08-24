@@ -4,6 +4,9 @@
   <ol>
     <% @billboard.songs.each do |song| %>
       <li><%= song.title %> <%= song.artist.name %></li>
+      <div>
+        <%= link_to 'Edit', edit_billboard_song_path([song.billboard, song]) %>
+      </div>
     <% end %>
   </ol>
 <hr>

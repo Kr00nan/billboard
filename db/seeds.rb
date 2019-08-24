@@ -10,7 +10,7 @@
 end
 
 # randomly generates billboard names from publisher titles...
-5.times do
+6.times do
   Billboard.create(
     name: Faker::Book.publisher
   )
@@ -21,8 +21,8 @@ end
   Song.create(
     title: Faker::Book.title,
     artist_id: rand(100) + 1,
-    # this will create 0 - 5 for billboard_id. '0' will allow from some
+    # this will create 0 - 5 for billboard_id. '6' will allow from some
     # songs not to be included on a bill board...
-    billboard_id: rand(6)
+    billboard_id: rand(6) + 1
   )
 end

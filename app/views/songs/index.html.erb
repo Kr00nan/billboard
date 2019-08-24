@@ -1,2 +1,29 @@
-<h1>Songs#index</h1>
-<p>Find me in app/views/songs/index.html.erb</p>
+<h1>Here's a list of all the songs in the Song table:</h1>
+<table>
+  <thead>
+    <tr>
+      <th colspan="4">Song List</th></tr>
+    <tr>
+      <td>Song Title</td>
+      <td>Artist</td>
+      <td>Genre</td>
+      <td>Billboard Reference</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @songs.each do |song|%>
+      <tr>
+        <td><%= song.title  %></td>
+        <td><%= song.artist.name  %></td>
+        <td><%= song.artist.genre  %></td>
+        <td>
+          <% if song.billboard_id != 6 %>
+            <%= song.billboard.name %>
+          <% else %>
+            <%= "" %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
