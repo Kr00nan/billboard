@@ -1,4 +1,7 @@
-<h1>My my...all these artists...</h1>
+
+<button class="ui left floated button"><%= link_to 'Back to Billboards', billboards_path %></button>
+<br>
+<h1>Artists</h1>
 
 <div class="container">
   <% @artists.each do |artist| %>
@@ -7,8 +10,8 @@
       <h2><%= artist.name %></h2>
     </div>
     <div class="extra content">
-      <button><%= link_to 'Show', artist_path(artist) %></button>
-      <button><%= link_to 'Delete', artist, method: :delete %></button>
+      <button class="ui primary left floated button"><%= link_to 'Show', artist_path(artist) %></button>
+      <button class="ui right floated button"><%= link_to 'Delete', artist, method: :delete %></button>
     </div>
   </div>
   <% end %>

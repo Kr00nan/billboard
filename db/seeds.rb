@@ -20,7 +20,8 @@ end
 100.times do
   Song.create(
     title: Faker::Book.title,
-    artist_id: rand(100) + 1,
+    # creates an artist id between 1 and 25
+    artist_id: rand(25) + 1,
     # this will create 1 - 5 for billboard_id.
     billboard_id: rand(5) + 1
   )

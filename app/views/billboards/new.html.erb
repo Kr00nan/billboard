@@ -1,10 +1,14 @@
 <p>Welcome to the NEW page!<p>
 
+<form class="ui form">
 <%= form_for @billboard do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
 
-  <%= f.submit %>
+  <button class="ui button"><%= f.submit %></button>
 <% end %>
-
+</form>
+<br>
 <%= link_to 'Return to the main page without submitting', billboards_path %>
