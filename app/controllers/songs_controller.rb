@@ -21,6 +21,9 @@ class SongsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
   def update
     if @song.update(song_params)
       redirect_to billboard_path(@song.billboard_id)

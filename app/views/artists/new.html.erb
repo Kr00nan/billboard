@@ -1,2 +1,13 @@
-<h1>Artists#new</h1>
-<p>Find me in app/views/artists/new.html.erb</p>
+<p>Welcome to the NEW page for artists!<p>
+
+<%= form_for @artist do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :genre %>
+  <%= f.text_field :genre %>
+
+  <%= f.submit %>
+<% end %>
+
+<%= link_to 'Return to the main page without submitting', artists_path %>

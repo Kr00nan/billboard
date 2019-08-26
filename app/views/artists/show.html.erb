@@ -1,2 +1,17 @@
-<h1>Artists#show</h1>
-<p>Find me in app/views/artists/show.html.erb</p>
+
+<div class="ui">
+  <div class="image">
+    <img src="https://robohash.org/<%= @artist.id %>?bgset=bg1">
+  </div>
+  <div class="content">
+    <p class="header"><%= @artist.name %></p>
+  </div>
+  <div class="extra content">
+    <p>
+      <i class="music icon"></i>
+      Genre: <%= @artist.genre %>
+    </p>
+  </div>
+</div>
+<%= link_to 'Back', artists_path %>
+<%= link_to 'Edit', edit_artist_path(@artist.id) %>

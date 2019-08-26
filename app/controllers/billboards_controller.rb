@@ -21,6 +21,9 @@ class BillboardsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
   def update
     if @billboard.update(billboard_params)
       redirect_to billboards_path

@@ -1,5 +1,6 @@
 <h1>Find all your billboards here!</h1>
 <hr>
+
 <% @billboards.each do |billboard| %>
   <% if billboard.id != 6 %>
     <h2>Top <%= billboard.name %> Billboard</h2>
@@ -8,6 +9,8 @@
     <%= link_to 'Delete', billboard, method: :delete %>
   <% end %>
 <% end %>
+
 <hr>
-<h3>Don't see the one you want?<h3>
-<%= link_to 'Add it!', new_billboard_path %>
+<h3>Don't see the one you want?<%= link_to ' Add it!', new_billboard_path %><h3>
+<h3>Want to see all the <%= link_to 'artists', artists_path %>?</h3>
+<h3>Want to see all the <%= link_to 'songs', songs_path %>?</h3>
